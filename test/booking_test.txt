@@ -1,0 +1,151 @@
+Site: booking.com
+
+=====================================================================================================================================================
+
+Test-case 1: You can't select a hotel in a nonexistent city
+
+-user is on the main page of the site booking.com
+Steps:
+1. In the field "Where are you going?" enter a nonexistent city. For example: adsfjkl.
+2. In the field Check in - Check out enter today - tomorrow.
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search.
+Result: near input box for city, red message was displayed "Sorry,we don't recognise that name",and
+city input field cleared.
+
+=====================================================================================================================================================
+
+Test-case 2: It's not possible to book a room in a hotel without indicating the date of arrival and date of departure 
+
+-user is on the main page of the site booking.com 
+Steps: 
+1. In the field "Where are you going?" enter city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter don't enter anything.
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search.
+5. A page appears with a list of hotels matching your destination. It was also proposed to choose the arrival date and departure date.
+6. Choose any hotel in the list and go to its page.
+Result: without the entered check-in and check-out dates, only the general
+hotel information + form for indicating the date of arrival and departure; There is no possibility to view available rooms or to reserve them,
+until the moment of entering the data on arrival
+
+=====================================================================================================================================================
+
+Test-case 3: Checking the coincidence of the values of the main parameters of the hotel on the hotel page with those indicated on the page
+reservation
+
+-user is on the main page of the site booking.com 
+Steps: 
+1. In the field "Where are you going?" enter city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter today - tommorow
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search
+5. A page appears with a list of hotels matching your destination. Choose the first hotel.
+6. The hotel page appears, listing the available rooms. Choose the first room in the list and press the "Reserve" button.
+7. The hotel reservation page has opened
+Result: arrival and departure dates, number of rooms and the total amount to pay.Reservations indicated on this page are the 
+same as those we have previously selected.
+
+=====================================================================================================================================================
+
+Test-case 4: You can't find a hotel without a selected departure date.
+
+-user is on the main page of the site booking.com
+Steps: 
+1. In the field "Where are you going?" enter city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter today - nothing.
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button check price.
+5. A page appears with a list of hotels with check in: today, check out: tommorow.
+Result: The site picked up the departure date the next day.
+
+=====================================================================================================================================================
+
+Test-case 5: Booking and payment for a hotel room in Madrid,Spain
+
+-user is on the main page of the site booking.com
+Steps:
+1. In the field "Where are you going?" enter a nonexistent city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter today - tommorow
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search
+5. A page appears with a list of hotels matching your destination. Choose the first hotel.
+6. The hotel page appears, listing the available rooms. Choose the first room in the list and press the "Reserve" button.
+7. The hotel reservation form has opened.
+8. Choose the:
+   Title: Mr. 
+   First name: Dima 
+   Last name: Circylia
+   Email address: bolik123@gmail.com
+   Confirm the email address: bokik123@gmail.com
+9. Push the button "Finish details"
+Result: open a page with form to pay. "Complete your booking" 
+
+=====================================================================================================================================================
+
+Test-case 6: When searching for another country, the departure date of departure is retained.
+
+-user is on the main page of the site booking.com
+Steps:
+1. In the field "Where are you going?" enter a nonexistent city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter today - tommorow.
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search.
+5. Return to main page,scroll down and see other countries with the same date.
+Result: When you click on the site, the previously selected date of check in and check out is saved.
+
+=====================================================================================================================================================
+
+Test-case 7: You can leave a review of hotels only with booking number and PIN.
+
+-user is on the main page of the site booking.com
+Steps:
+1. In the field "Where are you going?" enter a nonexistent city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter today - tommorow
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search
+5. A page appears with a list of hotels matching your destination. Choose the first hotel.
+6. Click on "Guest reviews" -> write a review
+7. Open a form with field "Booking number" and "PIN"
+Result: Only a customer who has booked through Booking.com and stayed at the property in question can write a review. 
+
+=====================================================================================================================================================
+
+Test-case 8: When closing the site, the language should not change
+
+-user is on the main page of the site booking.com
+1. Choose change language button
+2. Choose not default language. For example: Germany.
+3. Close this page
+4. Open the main page of booking.com. 
+Result: All information should be on Germany language.
+
+=====================================================================================================================================================
+
+Test-case 9: You cannot select a check-in / check-out date that has already passed.
+
+-user in on the main page of site booking.com
+1. In the field "Where are you going?" enter city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter yesterday - tommorow.
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search
+Result: The site does not allow you to choose yesterday.
+
+=====================================================================================================================================================
+
+Test-case 10:The choice of the number of days of stay in excess of one month.
+
+-user in on the main page of site booking.com
+1. In the field "Where are you going?" enter city. For example: Madrid,Spain.
+2. In the field Check in - Check out enter 08.11.2019- 02.11.2020
+3. In the filed adults/children/room, select 1 adults/0 children/1 room.
+4. Enter the button search
+Result: near input box date of, red message was displayed "Sorry, reservations for more than 30 nights are not possible.",and
+all data not cleared.
+
+
+=====================================================================================================================================================
+
+
+
+
