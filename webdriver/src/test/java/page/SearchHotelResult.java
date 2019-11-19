@@ -17,8 +17,6 @@ public class SearchHotelResult extends AbstractPage {
     public HotelPageInformation checkComment(){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         chooseHotelButton.click();
-        ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
         return new HotelPageInformation(driver);
     }
 

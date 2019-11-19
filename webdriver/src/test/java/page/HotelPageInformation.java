@@ -12,13 +12,13 @@ public class HotelPageInformation extends AbstractPage {
     @FindBy(xpath = "//a[@href ='#blockdisplay4']")
     private WebElement allGuestReviews;
 
-    @FindBy(xpath = "//div[@class='ugc_add_review_entrypoint_wrap ugc_add_review_entrypoint_simple  ']")
+    @FindBy(xpath = "//div[@class=' ugc_add_review_entrypoint_simple  ']")
     private WebElement writeReviewButton;
 
-    @FindBy(xpath = "//div[@class='bui_form__group entrypoint_form_button bui-spacer--larger  bui-spacer'")
+    @FindBy(xpath = "//div[@class='bui-spacer--larger  bui-spacer'")
     private WebElement rateYouStay;
 
-    @FindBy(xpath = "//div[@class='bui-alert bui-alert--error bui-u-bleed@small validation-error-message error-code']")
+    @FindBy(xpath = "//div[@class=' error-code']")
     private WebElement errorReviewMessage;
 
 

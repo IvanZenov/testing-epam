@@ -15,7 +15,7 @@ public class HotelHomePage extends AbstractPage{
     @FindBy(xpath = "//input[@id ='ss']")
     private WebElement inputPlace;
 
-    @FindBy(xpath = "//*[@id='frm']/div[1]/div[4]/div[2]/button") //Govno
+    @FindBy(xpath = "//*[@id='frm']/div[1]/div[4]/div[2]/button")
     private WebElement searchButton;
 
     @FindBy(xpath = "//span[@class ='sb-date-field__icon sb-date-field__icon-btn bk-svg-wrapper calendar-restructure-sb']")
@@ -28,20 +28,16 @@ public class HotelHomePage extends AbstractPage{
     private WebElement dateCheckOut;
 
    public HotelHomePage incorrectSearch(String destination, String checkIn, String checkOut){
-       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       inputPlace.sendKeys(destination);
-       arrivalDateSpan.click();
-       this.dateCheckIn = driver.findElement(By.xpath("//td[@data-date = '" + checkIn +"']"));
-       this.dateCheckOut = driver.findElement(By.xpath("//td[@data-date = '" + checkOut +"']"));
-       dateCheckIn.click();
-       dateCheckOut.click();
-       searchButton.click();
-
+       initDataSearch(destination,checkIn,checkOut);
        return new HotelHomePage(driver);
 
    }
-
     public SearchHotelResult correctSearch (String destination, String checkIn,String checkOut){
+        initDataSearch(destination,checkIn,checkOut);
+        return new SearchHotelResult(driver);
+    }
+
+    public void initDataSearch(String destination, String checkIn, String checkOut){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         inputPlace.sendKeys(destination);
         arrivalDateSpan.click();
@@ -50,8 +46,8 @@ public class HotelHomePage extends AbstractPage{
         dateCheckIn.click();
         dateCheckOut.click();
         searchButton.click();
-        return new SearchHotelResult(driver);
     }
+
 
     public String searchNotFoundAlertMessage(){
         return alertMessage.getText();
