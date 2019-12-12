@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.concurrent.TimeUnit;
 
 public class HotelPageInformation extends AbstractPage {
-    По н
 
     @FindBy(xpath = "// sb-destination__input")
     private WebElement destinationOfHotelPage;

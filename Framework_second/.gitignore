@@ -1,0 +1,22 @@
+.idea/
+*.iml
+
+*/target/*
+
+**/logs
+
+*.db
+*.log
+/target
+/bin
+*/target
+*/bin
+
+# Compiled class file
+*/**/*.class
+
+# Log file
+*/**/*.log
+
+# BlueJ files
+*/**/*.ctxt
