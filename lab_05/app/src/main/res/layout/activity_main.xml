@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <EditText
+            android:id="@+id/birthDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <Button
+            android:id="@+id/ButtonPerson"
+            android:layout_width="475dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="insertInfo"
+            android:text="Insert User" />
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <EditText
+            android:id="@+id/editTextSearchFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editTextSearchLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/ButtonSearch"
+            android:layout_width="429dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="findUser"
+            android:text="Search User" />
+
+        <Button
+            android:id="@+id/deleteUsers"
+            android:layout_width="433dp"
+            android:layout_height="match_parent"
+            android:onClick="deleteUsers"
+            android:text="Delete User" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewFindInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getUsers"
+            android:layout_width="438dp"
+            android:layout_height="wrap_content"
+            android:onClick="getUsers"
+            android:text="Get users" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewGetInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
